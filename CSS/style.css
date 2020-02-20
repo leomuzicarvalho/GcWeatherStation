@@ -1,0 +1,171 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 18px;
+    position: sticky;
+    background: rgb(255,255,255,0.5);
+    z-index: 1;
+    top: 0;
+}
+
+nav a{
+    transition: 0.4s all;
+}
+
+nav a:hover{
+    color: #00d358;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Menu style */
+
+.menu ul{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+/* Background */
+
+.background{
+    width: 100%;
+    height: 100%;
+    background: url("../imgs/bg.jpg");
+    background-size: 300% 300%;
+    animation: gradient 150s linear infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card Style */
+
+.cards-wrapper{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+    animation: fadein ease-in 1s;
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.temp-hum-pres-wrapper {
+    display: grid;
+    grid-template-areas:
+        'x x'
+        'y z';
+    width: 35%;
+}
+
+.temp-hum-pres-wrapper div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-graph{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.card-temp {
+    width: 100%;
+    grid-area: x;
+    padding-top: 20px;
+    background: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.card-humidity, .card-pressure{
+    background: rgb(255,255,255,0.7);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.card-temp h2, .card-graph h2{
+    position: absolute;
+    top: 20px;
+}
+
+.cards-wrapper p{
+    font-size: 30px;
+}
+
+/* Days style */
+
+ul.days {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 450px;
+}
+
+.days li {
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 160px;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: 0.3s all;
+}
+
+.days li:hover {
+    background:#00d358;
+    color: white;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
