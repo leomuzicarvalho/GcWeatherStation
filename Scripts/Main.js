@@ -21,6 +21,7 @@ const loadData = () => {
 
 const makeRequest = (pos) =>{
     $.ajax({
+        //url: "http://localhost:5000/api/temperatures",
         url: "http://api.openweathermap.org/data/2.5/weather?lat="+pos.posX+"&lon="+pos.posY+"&appid="+myApiKey,
         dataType: "json",
         success: (result) => {
